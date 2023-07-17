@@ -1,7 +1,7 @@
 Package: BiocHPRClk
 Date: 2022-10-01
 Title: A look at the human pangenome research consortium resources in AnVIL
-Version: 0.0.1
+Version: 0.0.2
 Authors@R:
     c(person(
         "Vincent", "Carey", role = c("aut", "cre"),
@@ -13,7 +13,7 @@ Description: This package assembles some very preliminary functions and data
 	related to the human pangenome research consortium materials in AnVIL.
 License: Artistic-2.0
 Encoding: UTF-8
-Depends: R (>= 3.6), dplyr
+Depends: R (>= 4.2), dplyr, VariantAnnotation
 Suggests: knitr, testthat, BiocStyle, shiny
 Imports: GenomicRanges, Biostrings
 VignetteBuilder: knitr
