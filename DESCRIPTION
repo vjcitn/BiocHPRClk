@@ -1,7 +1,7 @@
 Package: BiocHPRClk
 Date: 2022-10-01
 Title: A look at the human pangenome research consortium resources in AnVIL
-Version: 0.0.2
+Version: 0.0.3
 Authors@R:
     c(person(
         "Vincent", "Carey", role = c("aut", "cre"),
@@ -15,7 +15,7 @@ License: Artistic-2.0
 Encoding: UTF-8
 Depends: R (>= 4.2), dplyr, VariantAnnotation
 Suggests: knitr, testthat, BiocStyle, shiny
-Imports: GenomicRanges, Biostrings
+Imports: GenomicRanges, Biostrings, dplyr, ggplot2, snpStats
 VignetteBuilder: knitr
 biocViews: Infrastructure
 RoxygenNote: 7.2.3
