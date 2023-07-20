@@ -1,0 +1,44 @@
+---
+title: "Bioconductor peeks at pangenomes, 2023"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Bioconductor peeks at pangenomes, 2023}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+# Introduction
+
+State of the art work
+on a human pangenome reference (as of 2023) is described
+in [Liao et al.](https://www.nature.com/articles/s41586-023-05896-x)
+The first draft "contains 47 phased, diploid assemblies from a cohort of genetically diverse individuals".
+The purpose of this R package is to demonstrate how Bioconductor
+data structures can be used to explore resources from the first draft.
+
+# Minigraphs presented as GRanges
+
+From the Liao et al. paper:
+
+> Minigraph builds a pangenome by starting from a reference assembly, here 
+GRCh38, and iteratively and progressively adds in additional assemblies, recording only 
+SVs ≥ 50 bases. It admits complex variants, including duplications and inversions.
+
+```{r setup,message=FALSE}
+library(BiocHPRClk)
+library(S4Vectors)
+data(minigr_GRCh38)
+minigr_GRCh38
+```
+
+There is a description of the columns in the table:
+```{r lkmd}
+cat(metadata(minigr_GRCh38)[[1]])
+```
